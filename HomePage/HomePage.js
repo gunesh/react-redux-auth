@@ -36,24 +36,58 @@ class HomePage extends React.Component {
 
             <div className="collapse navbar-collapse" id="navbarResponsive">
               <ul className="navbar-nav ml-auto">
-<li className="nav-item active">
-            <a className="nav-link" href="#">Home
-              <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">About</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Services</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Contact</a>
-          </li>
+                <li className="nav-item active">
+                  <a className="nav-link" href="#">
+                    Home
+                    <span className="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="register">
+                    Register
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="login">
+                    Login
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-        </nav>{" "}
+        </nav>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3">
+              <h1 className="my-4">Shop Name</h1>
+              <div className="list-group">
+                <a href="#" className="list-group-item">
+                  Category 1
+                </a>
+                <a href="#" className="list-group-item">
+                  Category 2
+                </a>
+                <a href="#" className="list-group-item">
+                  Category 3
+                </a>
+              </div>
+            </div>
+
+            <div className="col-lg-9">ddfdff</div>
+          </div>
+        </div>
+        <footer className="py-5 bg-dark">
+          <div className="container">
+            <p className="m-0 text-center text-white">
+              Copyright &copy; Your Website 2019
+            </p>
+          </div>
+        </footer>
       </>
     );
   }
