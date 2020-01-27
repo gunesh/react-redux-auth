@@ -8,7 +8,6 @@ import { PrivateRoute } from "../_components";
 import { HomePage } from "../HomePage";
 import { LoginPage } from "../LoginPage";
 import { RegisterPage } from "../RegisterPage";
-import { ProfilePage } from "../ProfilePage";
 import "../Assets/css/style.scss";
 
 class App extends React.Component {
@@ -32,11 +31,10 @@ class App extends React.Component {
             )}
             <Router history={history}>
               <Switch>
-               <PrivateRoute exact path="/profile" component={ProfilePage} />
+                <PrivateRoute exact path="/" component={HomePage} />
                 <Route path="/login" component={LoginPage} />
                 <Route path="/register" component={RegisterPage} />
                 <Redirect from="*" to="/" />
-                 <PrivateRoute exact path="/profile" component={ProfilePage} />
               </Switch>
             </Router>
           </div>
