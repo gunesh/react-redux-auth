@@ -12,27 +12,35 @@ export function configureFakeBackend() {
                 if (url.endsWith('/users/authenticate') && opts.method === 'POST') {
                     // get parameters from post request
                     let params = JSON.parse(opts.body);
-
+          console.log('This is test');
                     // find if any user matches login credentials
                     let filteredUsers = users.filter(user => {
                         return user.username === params.username && user.password === params.password;
                     });
-
-                    if (filteredUsers.length) {
-                        // if login details are valid return user details and fake jwt token
                         let user = filteredUsers[0];
                         let responseJson = {
-                            id: user.id,
-                            username: user.username,
-                            firstName: user.firstName,
-                            lastName: user.lastName,
-                            token: 'fake-jwt-token'
+                            id: 1,
+                            username: 'gunesh',
+                            firstName: 'Gunesh',
+                            lastName: 'Asa',
+                            token: 'abcd122'
                         };
                         resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
-                    } else {
-                        // else return error
-                        reject('Username or password is incorrect');
-                    }
+                    // if (filteredUsers.length) {
+                    //     // if login details are valid return user details and fake jwt token
+                    //     let user = filteredUsers[0];
+                    //     let responseJson = {
+                    //         id: user.id,
+                    //         username: user.username,
+                    //         firstName: user.firstName,
+                    //         lastName: user.lastName,
+                    //         token: 'fake-jwt-token'
+                    //     };
+                    //     resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(responseJson)) });
+                    // } else {
+                    //     // else return error
+                    //     reject('Username or password is incorrect');
+                    // }
 
                     return;
                 }
