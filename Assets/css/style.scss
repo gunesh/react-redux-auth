@@ -1,4 +1,7 @@
 @import 'config';
+body {
+  background-image: $login-bg-image;
+}
 .body-login {
   background-color: $login-bg-color;
 }
