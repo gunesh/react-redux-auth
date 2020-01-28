@@ -1,4 +1,15 @@
 @import 'config';
-body {
+.body-login {
   background-color: $login-bg-color;
+}
+.body-register {
+  background-color: $login-bg-color;
+}
+.jumbotron {
+  
+  margin: 0 auto;
+  width: 90%;
+  padding: 5%;
+  margin-top: 20%;
+  
 }
